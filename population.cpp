@@ -1,4 +1,3 @@
-
 //Programmed by: Hunter Merchen
 
 #include "Specification.h"
@@ -11,6 +10,7 @@ void inputPopulation(Population&);
 void inputBirths(Population&);
 void inputDeaths(Population&);
 
+// Driver
 int main() {
 	Population Burleson;
 
@@ -32,7 +32,6 @@ int main() {
 
 	return 0;
 }
-
 
 // User function definitions
 void inputPopulation(Population& Obj) {
