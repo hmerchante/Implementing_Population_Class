@@ -15,8 +15,8 @@ public:
 	double getPopulation() const;
 	double getBirths() const;
 	double getDeaths() const;
-	double getBirthRate(Population targetPop);
-	double getDeathRate(Population targetPop);
+	double getBirthRate(Population targetPop) const;
+	double getDeathRate(Population targetPop) const;
 };
 
 #endif Specification_h

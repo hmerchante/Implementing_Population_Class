@@ -18,11 +18,11 @@ double Population::getBirths() const {
 double Population::getDeaths() const {
 	return numDeaths;
 }
-double Population::getBirthRate(Population targetPop) {
+double Population::getBirthRate(Population targetPop) const {
 	double birthRate = targetPop.getBirths() / targetPop.getPopulation();
 	return birthRate;
 }
-double Population::getDeathRate(Population targetPop) {
+double Population::getDeathRate(Population targetPop) const {
 	double deathRate = targetPop.getDeaths() / targetPop.getPopulation();
 	return deathRate;
 }
