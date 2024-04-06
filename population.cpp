@@ -16,15 +16,17 @@ int main() {
 
 	inputPopulation(Burleson);
 	cout << endl;
+
 	inputBirths(Burleson);
 	cout << endl;
+
 	inputDeaths(Burleson);
 	cout << endl;
 
 	cout << "Report prepared by : Hunter Merchen";
 	cout << "\n\nPopulation Statistics:\n";
-	cout << fixed << showpoint << setprecision(4);
 	cout << "\tPopulation: " << setw(7) << Burleson.getPopulation() << endl;
+	cout << fixed << showpoint << setprecision(4);
 	cout << "\tBirth Rate: " << setw(7) << Burleson.getBirthRate(Burleson) << endl;
 	cout << "\tDeath Rate: " << setw(7) << Burleson.getDeathRate(Burleson) << endl;
 	cout << "\n";
@@ -34,7 +36,7 @@ int main() {
 }
 
 // User function definitions
-void inputPopulation(Population& Obj) {
+void inputPopulation(Population& targetPop) {
 	double pop;
 	int minPop = 1;
 	int maxPop = 1000000;
@@ -46,15 +48,15 @@ void inputPopulation(Population& Obj) {
 			cerr << "Error: Invaild Input. Enter a Number Between 1 and One-Million.\n";
 		}
 		else {
-			Obj.setPopulation(pop);
+			targetPop.setPopulation(pop);
 			break;
 		}
 	}
 }
 
-void inputBirths(Population& Obj) {
+void inputBirths(Population& targetPop) {
 	double birth;
-	double pop = Obj.getPopulation();
+	double pop = targetPop.getPopulation();
 	double minBirth = 1;
 	double maxBirth = pop * 0.05; // 5% Population
 
@@ -67,15 +69,15 @@ void inputBirths(Population& Obj) {
 			cout << "Max allowed births is " << maxBirth << ".\n";
 		}
 		else {
-			Obj.setBirths(birth);
+			targetPop.setBirths(birth);
 			break;
 		}
 	}
 }
 
-void inputDeaths(Population& Obj) {
+void inputDeaths(Population& targetPop) {
 	double death;
-	double pop = Obj.getPopulation();
+	double pop = targetPop.getPopulation();
 	double minDeath = 1;
 	double maxDeath = pop * 0.05; // 5% Population
 
@@ -88,7 +90,7 @@ void inputDeaths(Population& Obj) {
 			cout << "Max allowed deaths is " << maxDeath << ".\n";
 		}
 		else {
-			Obj.setDeaths(death);
+			targetPop.setDeaths(death);
 			break;
 		}
 	}
